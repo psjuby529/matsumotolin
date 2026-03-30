@@ -21,13 +21,14 @@ export interface LeadRow {
   message: string;
   status: LeadStatus;
   source: string;
-  metadata: Record<string, unknown> | null;
+  metadata: Record<string, unknown>;
 }
 
 export type LeadInsert = Omit<
   LeadRow,
-  "id" | "created_at" | "updated_at" | "status" | "metadata"
+  "id" | "created_at" | "updated_at" | "status" | "source" | "metadata"
 > & {
   status?: LeadStatus;
-  metadata?: Record<string, unknown> | null;
+  source?: string;
+  metadata?: Record<string, unknown>;
 };

@@ -64,7 +64,7 @@ export default function ContactPage() {
             結構化需求表單
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-ml-ivory/55">
-            送出後將由顧問與您聯繫確認細節（目前為前台示意，尚未連線資料庫）。
+            送出後將由顧問與您聯繫確認細節，並保留於需求資料庫供後續追蹤。
           </p>
           <div className="mx-auto mt-10 max-w-2xl border border-white/10 bg-ml-navy-900/35 p-6 sm:p-8">
             <LeadForm id="contact-lead-form" formName="contact_lead" />

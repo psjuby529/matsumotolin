@@ -7,27 +7,6 @@ import {
   spaceTypeOptions,
   type LeadFormValues,
 } from "@/lib/schemas/lead";
-import type { LeadInsert } from "@/types/lead";
-
-function toLeadInsert(values: LeadFormValues): Omit<
-  LeadInsert,
-  "status" | "source"
-> {
-  return {
-    name: values.name,
-    phone: values.phone,
-    line_or_email: values.line_or_email,
-    region: values.region,
-    space_type: values.space_type,
-    area_ping: values.area_ping,
-    budget_range: values.budget_range,
-    has_floor_plan: values.has_floor_plan === "yes",
-    has_reference_images: values.has_reference_images === "yes",
-    needs_full_house_planning: values.needs_full_house_planning === "yes",
-    needs_smart_home: values.needs_smart_home === "yes",
-    message: values.message,
-  };
-}
 
 const yesNo = [
   { value: "yes" as const, label: "是" },
@@ -61,6 +40,8 @@ export function LeadForm({
     {},
   );
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleChange<K extends keyof LeadFormValues>(
     key: K,
@@ -70,8 +51,9 @@ export function LeadForm({
     setErrors((e) => ({ ...e, [key]: undefined }));
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSubmitError(null);
     const parsed = leadFormSchema.safeParse(values);
     if (!parsed.success) {
       const fieldErrors: Partial<Record<keyof LeadFormValues, string>> = {};
@@ -84,10 +66,31 @@ export function LeadForm({
       setErrors(fieldErrors);
       return;
     }
-    const payload = toLeadInsert(parsed.data);
-    // V1：示意；之後改為 POST /api/leads → Supabase
-    console.log("[lead:mock]", payload);
-    setSubmitted(true);
+    try {
+      setIsSubmitting(true);
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...parsed.data,
+          source: "website",
+        }),
+      });
+
+      const result: { message?: string } = await response.json();
+
+      if (!response.ok) {
+        setSubmitError(result.message ?? "送出失敗，請稍後再試。");
+        return;
+      }
+
+      setSubmitted(true);
+      setValues(defaultValues);
+    } catch {
+      setSubmitError("網路連線異常，請稍後重試。");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   const inputClass =
@@ -235,16 +238,22 @@ export function LeadForm({
       </Field>
       {submitted ? (
         <p className="text-sm text-ml-gold-300/90" role="status">
-          已收到您的需求（示意）。正式上線後將寫入系統並由顧問與您聯繫。
+          已收到您的需求，我們會盡快與您聯繫。
         </p>
       ) : (
         <button
           type="submit"
+          disabled={isSubmitting}
           className="w-full rounded-sm border border-ml-gold-400/45 bg-ml-gold-400/10 py-3 text-xs tracking-[0.25em] text-ml-gold-200 transition-colors hover:bg-ml-gold-400/15 sm:w-auto sm:px-12"
         >
-          送出需求
+          {isSubmitting ? "送出中..." : "送出需求"}
         </button>
       )}
+      {submitError ? (
+        <p className="text-sm text-red-300/90" role="alert">
+          {submitError}
+        </p>
+      ) : null}
     </form>
   );
 }

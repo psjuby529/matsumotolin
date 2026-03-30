@@ -58,73 +58,77 @@ export const homeCoreCapabilities: CoreCapability[] = [
 ];
 
 export const homeAiVrCopy = {
-  heading: "先看見，再動工。先校準，再下單。",
+  heading: "看得懂，選得定。",
   subtitle:
-    "從參考圖片、效果校準，到丈量、選材、3D／VR 呈現與正式報價，松本霖以更清晰的流程降低溝通成本，也提升成交與交付效率。",
+    "從參考圖片到 3D / VR 呈現，先把想像變清楚，再讓選擇更安心。",
 };
 
 export const homeAiVrSteps: ProcessStep[] = [
   {
     id: "a1",
+    title: "喜歡的風格，不再只能靠想像溝通",
+    description: "把偏好視覺化，讓你與團隊在同一個畫面上討論。",
+  },
+  {
+    id: "a2",
+    title: "效果可先對焦，減少施工後落差",
+    description: "在動工前先校準關鍵感受，避免後續反覆修改。",
+  },
+  {
+    id: "a3",
+    title: "重要選擇先看見，再更安心地下決定",
+    description: "把關鍵決策前移，讓每一步都更踏實可控。",
+  },
+  {
+    id: "a4",
     title: "上傳參考圖與需求",
     description: "先把喜歡的風格、空間條件與預期效果整理進來。",
   },
   {
-    id: "a2",
+    id: "a5",
     title: "線上效果校準",
     description: "先對齊想像，再進入下一步，不讓施工建立在模糊理解上。",
   },
   {
-    id: "a3",
-    title: "可行性與初步預估",
-    description: "同步工廠與執行端，先判斷材料方向、可行性與預算區間。",
-  },
-  {
-    id: "a4",
-    title: "現場丈量與選板",
-    description: "把真正落地需要的尺寸、細節與板材樣式一次確認。",
-  },
-  {
-    id: "a5",
-    title: "全屋規劃與 3D / VR 呈現",
-    description: "全屋案件可進一步進入平面配置、漫遊與效果影片階段。",
-  },
-  {
     id: "a6",
-    title: "正式報價、生產、安裝與驗收",
-    description: "從下單到交付，每一步更清楚，也更可控。",
+    title: "3D / VR 呈現與落地整合",
+    description: "從可視化到交付執行，體驗與落地一致連動。",
   },
 ];
 
 export const homeFeaturedServicesCopy = {
-  heading: "不只做裝修，而是做更值得久住的空間。",
+  heading: "從投顧判斷出發，完成空間與資產升級。",
   footer:
-    "每一項服務都可獨立選擇，也能整合成以投顧服務與空間資產升級策略為核心的完整升級方案。",
+    "不是先決定做什麼，而是先判斷什麼值得做，再用材料、智能與整合式施工把價值落地。",
 };
 
 export const homeFeaturedServices: ServiceTeaser[] = [
   {
     id: "s1",
-    title: "系統櫃與收納整合",
-    summary: "讓坪效、美感與生活動線一起提升。",
+    title: "投顧服務",
+    summary:
+      "從物件條件、持有策略與投入回報角度出發，先判斷什麼值得做、怎麼做更合理。",
     href: "/services#custom",
   },
   {
     id: "s2",
-    title: "木地板與空間質感升級",
-    summary: "用更快速、穩定的方式，重塑空間底層氣質。",
+    title: "空間資產升級策略",
+    summary:
+      "不只改善居住感受，更從坪效、出租力、轉手價值與長期持有邏輯規劃升級方向。",
     href: "/services#smart",
   },
   {
     id: "s3",
-    title: "智能家居整合安裝",
-    summary: "讓居住更便利，也更符合未來生活方式。",
+    title: "模組化綠建材與系統整合",
+    summary:
+      "以系統櫃、木地板、牆板等模組化材料，提升施工效率、風格一致性與使用穩定度。",
     href: "/services#pm",
   },
   {
     id: "s4",
-    title: "全屋規劃與老屋升級",
-    summary: "針對自住與投資型物件，提供更完整的整合方案。",
+    title: "智能家居與整合式落地",
+    summary:
+      "讓智慧設備、空間規劃與施工安裝真正整合，從展示效果走到可落地的生活體驗。",
     href: "/services#experience",
   },
 ];
