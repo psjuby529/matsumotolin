@@ -13,6 +13,17 @@
   --ml-ivory: #f4f1eb;
   --background: var(--ml-navy-950);
   --foreground: var(--ml-ivory);
+
+  /* Luxury polish tokens */
+  --ml-radius-xl: 18px;
+  --ml-radius-lg: 14px;
+  --ml-radius-md: 12px;
+  --ml-border-soft: rgba(255, 255, 255, 0.09);
+  --ml-border-strong: rgba(196, 176, 140, 0.38);
+  --ml-card-bg: rgba(10, 22, 40, 0.32);
+  /* Keep shadows subtle; high-end feel comes from spacing + contrast */
+  --ml-shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  --ml-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.22);
   --ml-leather: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
 }
 
@@ -63,4 +74,27 @@ body {
 .ml-focus-ring:focus-visible {
   outline: 1px solid var(--ml-gold-400);
   outline-offset: 3px;
+}
+
+/* Shared surface styles (used by home polish) */
+.ml-card {
+  border-radius: var(--ml-radius-xl);
+  border: 1px solid var(--ml-border-soft);
+  background: var(--ml-card-bg);
+  box-shadow: var(--ml-shadow-soft);
+}
+
+.ml-card-press {
+  border-radius: var(--ml-radius-xl);
+  border: 1px solid var(--ml-border-soft);
+  background: var(--ml-card-bg);
+}
+
+.ml-card:hover {
+  box-shadow: var(--ml-shadow-soft);
+}
+
+.ml-divider-soft {
+  background: linear-gradient(90deg, transparent, rgba(196, 176, 140, 0.22), transparent);
+  height: 1px;
 }

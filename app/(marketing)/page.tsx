@@ -7,11 +7,17 @@ import { FeaturedServicesSection } from "@/components/marketing/home/FeaturedSer
 import { HeroSection } from "@/components/marketing/home/HeroSection";
 import { InvestmentAdvisorSection } from "@/components/marketing/home/InvestmentAdvisorSection";
 import {
+  homeAiVrCopy,
   homeAiVrSteps,
+  homeBrandValue,
+  homeCoreCopy,
   homeCoreCapabilities,
   homeFaq,
+  homeFeaturedCasesCopy,
   homeFeaturedCases,
+  homeFeaturedServicesCopy,
   homeFeaturedServices,
+  homeFinalCtaCopy,
   homeHero,
   homeInvestment,
 } from "@/lib/data/home";
@@ -27,13 +33,34 @@ export default function HomePage() {
   return (
     <>
       <HeroSection data={homeHero} />
-      <CoreCapabilitiesSection items={homeCoreCapabilities} />
-      <AiVrProcessSection steps={homeAiVrSteps} />
-      <FeaturedServicesSection items={homeFeaturedServices} />
-      <FeaturedCasesSection items={homeFeaturedCases} />
+      <CoreCapabilitiesSection
+        items={homeCoreCapabilities}
+        heading={homeCoreCopy.heading}
+        brandValue={homeBrandValue}
+      />
+      <AiVrProcessSection
+        steps={homeAiVrSteps}
+        heading={homeAiVrCopy.heading}
+        subtitle={homeAiVrCopy.subtitle}
+      />
+      <FeaturedServicesSection
+        items={homeFeaturedServices}
+        heading={homeFeaturedServicesCopy.heading}
+        footer={homeFeaturedServicesCopy.footer}
+      />
+      <FeaturedCasesSection
+        items={homeFeaturedCases}
+        heading={homeFeaturedCasesCopy.heading}
+        subtitle={homeFeaturedCasesCopy.subtitle}
+      />
       <InvestmentAdvisorSection data={homeInvestment} />
       <FaqSection items={homeFaq} />
-      <CtaFormSection />
+      <CtaFormSection
+        heading={homeFinalCtaCopy.heading}
+        body={homeFinalCtaCopy.body}
+        primaryCta={homeFinalCtaCopy.primaryCta}
+        secondaryCta={homeFinalCtaCopy.secondaryCta}
+      />
     </>
   );
 }

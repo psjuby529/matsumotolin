@@ -51,7 +51,7 @@ function MobileNav() {
       <summary className="ml-focus-ring cursor-pointer list-none rounded-sm border border-white/10 px-3 py-2 text-xs tracking-widest text-ml-ivory/90">
         選單
       </summary>
-      <div className="absolute right-0 mt-2 w-52 border border-white/10 bg-ml-navy-900/95 p-3 shadow-xl backdrop-blur">
+      <div className="absolute right-0 mt-2 w-52 border border-white/10 bg-ml-navy-900/95 p-3 shadow-lg backdrop-blur">
         <nav className="flex flex-col gap-2 text-sm" aria-label="手機版導覽">
           {nav.map((item) => (
             <Link

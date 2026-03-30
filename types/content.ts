@@ -4,6 +4,8 @@ export interface HomeHeroContent {
   brandNameEn: string;
   taglineZh: string;
   taglineEn: string;
+  subtitle: string;
+  description: string;
   /** 背景圖 URL（可為 CDN / Supabase Storage）；無則僅用 CSS 紋理 */
   backgroundImageUrl: string | null;
   backgroundAlt: string;
@@ -51,4 +53,5 @@ export interface InvestmentModuleContent {
   title: string;
   body: string[];
   highlights: { title: string; text: string }[];
+  cta: { label: string; href: string };
 }

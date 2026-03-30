@@ -4,34 +4,40 @@ import type { CoreCapability } from "@/types/content";
 
 export function CoreCapabilitiesSection({
   items,
+  heading,
+  brandValue,
 }: {
   items: CoreCapability[];
+  heading: string;
+  brandValue: { heading: string; body1: string; body2: string };
 }) {
   return (
     <section
-      className="border-t border-white/5 py-20 sm:py-28"
+      className="border-t border-white/5 py-24 sm:py-32"
       aria-labelledby="core-capabilities-heading"
     >
       <Container>
-        <SectionHeading
-          eyebrow="Core"
-          id="core-capabilities-heading"
-          title="三大核心能力"
-          description="設計敘事、資料結構與專案治理，支撐可長期營運的品牌型交付。"
-        />
-        <ul className="grid gap-6 md:grid-cols-3">
+        <div className="max-w-xl">
+          <SectionHeading
+            eyebrow="Core"
+            id="core-capabilities-heading"
+            title={heading}
+            description={`${brandValue.heading} ${brandValue.body1} ${brandValue.body2}`}
+          />
+        </div>
+        <ul className="mt-10 grid gap-7 md:grid-cols-3">
           {items.map((item, i) => (
             <li
               key={item.id}
-              className="group border border-white/8 bg-ml-navy-900/40 p-6 transition-colors hover:border-ml-gold-400/20"
+              className="group rounded-xl border border-white/10 bg-ml-navy-900/25 p-7 transition-colors hover:border-ml-gold-400/25"
             >
-              <span className="font-display text-sm text-ml-gold-400/70">
+              <span className="font-display text-xs tracking-[0.12em] text-ml-gold-400/80">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-3 text-base font-medium tracking-wide text-ml-ivory">
+              <h3 className="mt-4 text-[15px] font-medium tracking-wide text-ml-ivory">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ml-ivory/58">
+              <p className="mt-4 text-sm leading-relaxed text-ml-ivory/62">
                 {item.description}
               </p>
             </li>

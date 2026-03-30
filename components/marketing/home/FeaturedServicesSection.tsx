@@ -5,40 +5,44 @@ import type { ServiceTeaser } from "@/types/content";
 
 export function FeaturedServicesSection({
   items,
+  heading,
+  footer,
 }: {
   items: ServiceTeaser[];
+  heading: string;
+  footer: string;
 }) {
   return (
     <section
-      className="border-t border-white/5 py-20 sm:py-28"
+      className="border-t border-white/5 py-24 sm:py-32"
       aria-labelledby="featured-services-heading"
     >
       <Container>
         <SectionHeading
           eyebrow="Services"
           id="featured-services-heading"
-          title="精選服務"
-          description="依專案階段組合模組；完整服務線請見服務頁。"
+          title={heading}
         />
-        <ul className="grid gap-5 md:grid-cols-3">
+        <ul className="grid gap-6 md:grid-cols-3">
           {items.map((item) => (
             <li
               key={item.id}
-              className="flex flex-col border border-white/8 bg-gradient-to-b from-white/[0.03] to-transparent p-6"
+              className="flex flex-col rounded-xl border border-white/10 bg-ml-navy-900/25 p-7 transition-colors hover:border-ml-gold-400/25"
             >
-              <h3 className="text-base font-medium text-ml-ivory">{item.title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-ml-ivory/58">
+              <h3 className="text-[15px] font-medium text-ml-ivory">{item.title}</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-ml-ivory/62">
                 {item.summary}
               </p>
               <Link
                 href={item.href}
-                className="mt-6 inline-flex text-xs tracking-[0.2em] text-ml-gold-300/90 hover:text-ml-gold-200"
+                className="mt-6 inline-flex text-xs tracking-[0.2em] text-ml-gold-300/75 hover:text-ml-gold-200"
               >
                 了解細節 →
               </Link>
             </li>
           ))}
         </ul>
+        <p className="mt-10 text-sm leading-relaxed text-ml-ivory/62">{footer}</p>
       </Container>
     </section>
   );

@@ -10,20 +10,22 @@ export function SectionHeading({
   id?: string;
 }) {
   return (
-    <div className="mb-10 max-w-2xl">
+    <div className="mb-12 max-w-2xl sm:mb-14">
       {eyebrow ? (
-        <p className="text-[10px] uppercase tracking-[0.35em] text-ml-gold-400/80">
+        <p className="text-[10px] uppercase tracking-[0.35em] text-ml-gold-400/75">
           {eyebrow}
         </p>
       ) : null}
       <h2
         id={id}
-        className="mt-3 font-display text-3xl font-normal tracking-tight text-ml-ivory sm:text-[2rem]"
+        className="mt-4 font-display text-[2.25rem] font-normal tracking-tight text-ml-ivory sm:text-[2.5rem]"
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-sm leading-relaxed text-ml-ivory/60">{description}</p>
+        <p className="mt-5 text-[13px] leading-relaxed text-ml-ivory/62">
+          {description}
+        </p>
       ) : null}
     </div>
   );

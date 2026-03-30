@@ -13,6 +13,10 @@ export const homeHero: HomeHeroContent = {
   brandNameEn: "MatsumotoLin",
   taglineZh: "輕奢生活，輕盈入手",
   taglineEn: "Effortless Luxury.",
+  subtitle:
+    "以模組化綠建材、智能家居與整合式裝修改造，為空間與資產創造更長期的價值。",
+  description:
+    "從系統櫃、木地板到全屋規劃，松本霖以更高級的審美、更有效率的交付與更高 CP 值的整合方案，重新定義當代居住升級。",
   backgroundImageUrl: "/hero-bg.jpg",
   backgroundAlt:
     "低調輕奢室內氛圍參考圖（背景層，標語為獨立文字）",
@@ -20,70 +24,115 @@ export const homeHero: HomeHeroContent = {
   secondaryCta: { label: "上傳需求", href: "/contact#upload" },
 };
 
+export const homeBrandValue = {
+  heading: "高級感，不該是高門檻。",
+  body1:
+    "真正好的空間升級，不是盲目堆疊昂貴材料，而是在預算、審美、功能與長期價值之間，找到更好的平衡。",
+  body2:
+    "松本霖提供的不只是產品或施工，而是一套兼顧美感、效率與可持續迭代的整合方案。",
+};
+
+export const homeCoreCopy = {
+  heading: "從材料到落地，一站完成空間升級。",
+};
+
 export const homeCoreCapabilities: CoreCapability[] = [
   {
     id: "1",
-    title: "工廠級精度 × 設計敘事",
+    title: "模組化綠建材",
     description:
-      "從板材、收邊到光影層次，以製程級標準落實空間語言；讓每一道線條都經得起近距離凝視。",
+      "以系統櫃、木地板、牆板等模組化材料，提升施工效率、風格一致性與長期使用穩定度。",
   },
   {
     id: "2",
-    title: "AI 原生資料結構",
+    title: "智能家居包安裝",
     description:
-      "需求、偏好與現場條件以結構化資料貫穿設計、估價與交付，為未來 CRM / SCM 整合預留一致語彙。",
+      "讓智慧設備不只是科技配件，而是真正融入日常動線與生活節奏的升級。",
   },
   {
     id: "3",
-    title: "輕奢節奏的專案治理",
+    title: "空間整合與資產升級思維",
     description:
-      "清楚節點、可追溯決策、可閱讀的進度敘事；降低不確定性，讓您專注於生活本身。",
+      "不只考慮現在好不好看，更從居住品質、坪效與長期持有價值來規劃每一次改造。",
   },
 ];
+
+export const homeAiVrCopy = {
+  heading: "先看見，再動工。先校準，再下單。",
+  subtitle:
+    "從參考圖片、效果校準，到丈量、選材、3D／VR 呈現與正式報價，松本霖以更清晰的流程降低溝通成本，也提升成交與交付效率。",
+};
 
 export const homeAiVrSteps: ProcessStep[] = [
   {
     id: "a1",
-    title: "需求校準",
-    description: "以結構化問卷與參考素材對齊風格、機能與預算區間，形成可運算的設計輸入。",
+    title: "上傳參考圖與需求",
+    description: "先把喜歡的風格、空間條件與預期效果整理進來。",
   },
   {
     id: "a2",
-    title: "線上效果對焦",
-    description: "在進場前完成方向收斂，減少重工與隱性成本，讓決策可被記錄與追蹤。",
+    title: "線上效果校準",
+    description: "先對齊想像，再進入下一步，不讓施工建立在模糊理解上。",
   },
   {
     id: "a3",
-    title: "3D / VR 空間演繹",
-    description: "以可漫步的視覺模型輔助理解比例與動線，協助您做出更篤定的選擇。",
+    title: "可行性與初步預估",
+    description: "同步工廠與執行端，先判斷材料方向、可行性與預算區間。",
   },
   {
     id: "a4",
-    title: "交付與擴充",
-    description: "成果可回寫至內容與物料系統，支援後續維運、智能家居與模組化更新。",
+    title: "現場丈量與選板",
+    description: "把真正落地需要的尺寸、細節與板材樣式一次確認。",
+  },
+  {
+    id: "a5",
+    title: "全屋規劃與 3D / VR 呈現",
+    description: "全屋案件可進一步進入平面配置、漫遊與效果影片階段。",
+  },
+  {
+    id: "a6",
+    title: "正式報價、生產、安裝與驗收",
+    description: "從下單到交付，每一步更清楚，也更可控。",
   },
 ];
+
+export const homeFeaturedServicesCopy = {
+  heading: "不只做裝修，而是做更值得久住的空間。",
+  footer: "每一項服務都可獨立選擇，也能整合成更完整的升級方案。",
+};
 
 export const homeFeaturedServices: ServiceTeaser[] = [
   {
     id: "s1",
-    title: "全屋訂製與收納",
-    summary: "動線、收納與材質一體配置，維持空間秩序與留白。",
+    title: "系統櫃與收納整合",
+    summary: "讓坪效、美感與生活動線一起提升。",
     href: "/services#custom",
   },
   {
     id: "s2",
-    title: "智慧居家整合",
-    summary: "情境光源、聯網裝置與介面層級的克制呈現。",
+    title: "木地板與空間質感升級",
+    summary: "用更快速、穩定的方式，重塑空間底層氣質。",
     href: "/services#smart",
   },
   {
     id: "s3",
-    title: "精品工程管理",
-    summary: "節點透明、工法可追溯，讓品質可被閱讀。",
+    title: "智能家居整合安裝",
+    summary: "讓居住更便利，也更符合未來生活方式。",
     href: "/services#pm",
   },
+  {
+    id: "s4",
+    title: "全屋規劃與老屋升級",
+    summary: "針對自住與投資型物件，提供更完整的整合方案。",
+    href: "/services#experience",
+  },
 ];
+
+export const homeFeaturedCasesCopy = {
+  heading: "案例不是只展示效果，而是展示判斷力。",
+  subtitle:
+    "從小戶型優化、老屋翻新，到投資型改造與智能整合，松本霖更重視的是：每一個空間，是否真的更適合生活，也更值得持有。",
+};
 
 export const homeFeaturedCases: CaseTeaser[] = [
   {
@@ -117,10 +166,10 @@ export const homeFeaturedCases: CaseTeaser[] = [
 
 export const homeInvestment: InvestmentModuleContent = {
   eyebrow: "Spatial Asset",
-  title: "投資顧問視角下的「空間資產」升級",
+  title: "從空間升級，到資產升級。",
   body: [
-    "我們將住宅與商空視為可管理的資產：從耐久材、可維運性到租售與生活週期，協助您做出更理性的配置決策。",
-    "不以堆砌材價取勝，而以秩序、可讀性與可延續性，讓空間在時間裡維持價值曲線。",
+    "有些改造，是為了住得更舒服；有些改造，則能同時提升出租力、轉手價值與整體投報率。",
+    "松本霖將材料、裝修、空間規劃與房產判斷結合，不只是把房子變漂亮，而是讓資產更有長期價值。",
   ],
   highlights: [
     {
@@ -136,31 +185,46 @@ export const homeInvestment: InvestmentModuleContent = {
       text: "預留智能、模組與內容系統接口，降低未來改裝摩擦。",
     },
   ],
+  cta: { label: "了解資產升級方案", href: "/contact#lead-form" },
 };
 
 export const homeFaq: FaqItem[] = [
   {
     id: "f1",
-    question: "與一般裝修或木作店有何不同？",
+    question: "你們是做裝修，還是做建材？",
     answer:
-      "松本霖以品牌型交付與資料化流程為核心：設計語彙、工法標準與專案節點皆可被閱讀與追蹤，並為後續系統整合預留結構。",
+      "松本霖不是單一類型公司，而是以模組化綠建材、智能家居與整合式裝修改造為核心，提供更完整的空間升級方案。",
   },
   {
     id: "f2",
-    question: "是否一定要做全屋規劃？",
+    question: "可以只做系統櫃或木地板嗎？",
     answer:
-      "可依範圍調整；我們會在需求校準後提出最合適的階段性方案，避免過度承諾或隱性追加。",
+      "可以。你可以從單一品項開始，也可以整合成更完整的規劃與施工方案。",
   },
   {
     id: "f3",
-    question: "預約後的流程為何？",
+    question: "沒有平面圖，也可以先諮詢嗎？",
     answer:
-      "線上送出結構化需求後，顧問將與您確認細節與時程；必要時安排現場丈量與材質選配，再進入正式報價與生產排程。",
+      "可以先初步諮詢；若要進入更精準的規劃與報價，仍建議提供平面圖、現場照片或後續丈量資料。",
   },
   {
     id: "f4",
-    question: "資料是否安全？",
+    question: "你們有做全屋規劃嗎？",
     answer:
-      "表單與附件將依階段導入加密傳輸與權限管理（V1 為前台結構化收集，後續串接 Supabase 與後台治理）。",
+      "有。全屋規劃案件可進一步進入平面配置、3D、VR 漫遊與材料整合階段。",
+  },
+  {
+    id: "f5",
+    question: "你們只適合自住客嗎？",
+    answer:
+      "不是。除了自住型客戶，投資型物件、老屋改造與資產升級需求，也都是松本霖的重點服務場景。",
   },
 ];
+
+export const homeFinalCtaCopy = {
+  heading: "把你的需求交給我們，下一步就會更清楚。",
+  body:
+    "不論你現在只有一張參考圖、一個想法，還是一個準備升級的完整物件，松本霖都可以從需求整理、效果校準到正式規劃，陪你走到更清晰的一步。",
+  primaryCta: "預約諮詢",
+  secondaryCta: "上傳需求",
+};
