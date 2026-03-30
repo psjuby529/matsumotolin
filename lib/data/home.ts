@@ -14,9 +14,9 @@ export const homeHero: HomeHeroContent = {
   taglineZh: "輕奢生活，輕盈入手",
   taglineEn: "Effortless Luxury.",
   subtitle:
-    "以模組化綠建材、智能家居與整合式裝修改造，為空間與資產創造更長期的價值。",
+    "以投顧服務與空間資產升級策略為核心，整合模組化綠建材、智能家居與裝修改造，為空間與資產創造更長期的價值。",
   description:
-    "從系統櫃、木地板到全屋規劃，松本霖以更高級的審美、更有效率的交付與更高 CP 值的整合方案，重新定義當代居住升級。",
+    "從系統櫃、木地板到全屋規劃，松本霖不只提供更高級的審美與更有效率的交付，更從投顧服務與資產升級視角出發，重新定義當代居住與持有價值。",
   backgroundImageUrl: "/hero-bg.jpg",
   backgroundAlt:
     "低調輕奢室內氛圍參考圖（背景層，標語為獨立文字）",
@@ -51,9 +51,9 @@ export const homeCoreCapabilities: CoreCapability[] = [
   },
   {
     id: "3",
-    title: "空間整合與資產升級思維",
+    title: "投顧服務與空間資產升級策略",
     description:
-      "不只考慮現在好不好看，更從居住品質、坪效與長期持有價值來規劃每一次改造。",
+      "不只考慮現在好不好看，更從居住品質、坪效、出租力、轉手價值與長期持有策略來規劃每一次改造。",
   },
 ];
 
@@ -98,7 +98,8 @@ export const homeAiVrSteps: ProcessStep[] = [
 
 export const homeFeaturedServicesCopy = {
   heading: "不只做裝修，而是做更值得久住的空間。",
-  footer: "每一項服務都可獨立選擇，也能整合成更完整的升級方案。",
+  footer:
+    "每一項服務都可獨立選擇，也能整合成以投顧服務與空間資產升級策略為核心的完整升級方案。",
 };
 
 export const homeFeaturedServices: ServiceTeaser[] = [
@@ -166,10 +167,10 @@ export const homeFeaturedCases: CaseTeaser[] = [
 
 export const homeInvestment: InvestmentModuleContent = {
   eyebrow: "Spatial Asset",
-  title: "從空間升級，到資產升級。",
+  title: "投顧服務，連接空間升級與資產升級。",
   body: [
-    "有些改造，是為了住得更舒服；有些改造，則能同時提升出租力、轉手價值與整體投報率。",
-    "松本霖將材料、裝修、空間規劃與房產判斷結合，不只是把房子變漂亮，而是讓資產更有長期價值。",
+    "松本霖的核心，不只是把空間做得更好看，而是以投顧服務與空間資產升級策略為出發點，判斷什麼該做、怎麼做、做到什麼程度最有價值。",
+    "有些改造，是為了住得更舒服；有些改造，則能同時提升出租力、轉手價值與整體投報率。松本霖將材料、裝修、空間規劃與房產判斷結合，讓每一次投入都更接近長期價值。",
   ],
   highlights: [
     {
@@ -185,7 +186,7 @@ export const homeInvestment: InvestmentModuleContent = {
       text: "預留智能、模組與內容系統接口，降低未來改裝摩擦。",
     },
   ],
-  cta: { label: "了解資產升級方案", href: "/contact#lead-form" },
+  cta: { label: "了解投顧服務與資產升級方案", href: "/contact#lead-form" },
 };
 
 export const homeFaq: FaqItem[] = [
@@ -224,7 +225,7 @@ export const homeFaq: FaqItem[] = [
 export const homeFinalCtaCopy = {
   heading: "把你的需求交給我們，下一步就會更清楚。",
   body:
-    "不論你現在只有一張參考圖、一個想法，還是一個準備升級的完整物件，松本霖都可以從需求整理、效果校準到正式規劃，陪你走到更清晰的一步。",
+    "不論你現在只有一張參考圖、一個想法，還是一個準備升級的完整物件，松本霖都可以從投顧判斷、需求整理、效果校準到正式規劃，陪你走到更清晰的一步。",
   primaryCta: "預約諮詢",
   secondaryCta: "上傳需求",
 };
